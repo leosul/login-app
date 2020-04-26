@@ -1,11 +1,7 @@
-import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-//import App from './App';
-//import MainContainer from './pages/main/MainContainer'
-import SigninContainer from './pages/signin/SigninContainer'
+import routes from './routes'
 
-ReactDOM.render( <
-    SigninContainer / > ,
+ReactDOM.render( routes,
     document.getElementById('root')
 );
