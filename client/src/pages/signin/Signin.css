@@ -1,0 +1,76 @@
+#signin {
+    background-color: #fbfbfb;
+    border-radius: 3px;
+    margin: auto;
+    padding: 20px;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.2);
+    display: flex;
+}
+
+#signin header h2 {
+    text-align: center;
+}
+
+#signin .providers {
+    margin: 20px 0 0 0;
+    text-align: center;
+}
+
+#signin .providers button {
+    display: flex;
+    margin-bottom: 20px;
+    width: 220px;
+}
+
+#signin .providers .facebook-button {
+    background: #4267b2;
+    border-radius: 2px;
+    border: 1px solid transparent;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 2px 2px 0px;
+    color: white;
+    cursor: pointer;
+    display: inline-block;
+    font-family: sans-serif;
+    font-size: 14px;
+    margin-bottom: 0;
+    padding: 12px;
+    padding-left: 25px;
+    position: relative;
+    text-align: center;
+}
+
+#signin .providers .facebook-button i {
+    font-size: 20px;
+    left: 12px;
+    margin-top: -1px;
+    position: absolute;
+}
+
+#signin footer {
+    margin-top: 30px;
+}
+
+#signin footer p {
+    color: #888888;
+    font-size: 15px;
+    text-align: center;
+}
+
+#signin footer p a {
+    color: #9c27b0;
+    font-weight: bold;
+}
+
+@media screen and (min-width: 375px) {
+    #signin {
+        max-width: 450px;
+        padding: 40px;
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    #signin {
+        margin-top: 40px;
+        padding: 40px;
+    }
+}
