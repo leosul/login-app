@@ -9,9 +9,9 @@ import {
 } from 'react-router-dom'
 
 import { store, persistor } from './store'
-//import AuthorizedRoute from './pages/authorizedRoute/AuthorizedRoute'
+import AuthorizedRoute from './pages/authorizedRoute/AuthorizedRoute'
 import SigninContainer from './pages/signin/SigninContainer'
-//import MainContainer from './pages/main/MainContainer'
+import MainContainer from './pages/main/MainContainer'
 
 const routes = (
     <Provider store={store}>
@@ -19,7 +19,7 @@ const routes = (
         <Router>
             <Switch>
               <Route path='/signin' component={SigninContainer} exact />
-              {/*<AuthorizedRoute path='/' component={MainContainer} exact />*/}
+              <AuthorizedRoute path='/' component={MainContainer} exact />
               <Redirect from='*' to='/' />
             </Switch>
         </Router>
