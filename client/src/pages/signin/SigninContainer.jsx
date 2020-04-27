@@ -53,6 +53,8 @@ class SigninContainer extends Component {
             body: JSON.stringify({ provider: 'facebook', token: response.accessToken })
           })
       
+          alert(res.url)
+          
           if (res.ok) {
             const user = await res.json()
             this.props.dispatch(login(user))
