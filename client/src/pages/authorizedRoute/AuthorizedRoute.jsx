@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { Redirect, Route } from 'react-router-dom'
+import Fetcher from './../../utils/Fetcher'
 
 class AuthorizedRoute extends Component {
   render () {
@@ -13,6 +14,7 @@ class AuthorizedRoute extends Component {
         }
 
         props.user = user
+        props.fetcher = new Fetcher(user.token, dispatch)
         return <Component {...props} />
       }} />
     )
