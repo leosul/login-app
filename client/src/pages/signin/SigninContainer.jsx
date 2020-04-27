@@ -4,6 +4,7 @@ import { withRouter, Redirect } from 'react-router-dom'
 import PropTypes from 'prop-types'
 import Signin from './Signin'
 import { login } from '../../actions'
+const { fetch } = window
 
 class SigninContainer extends Component {
     constructor(props) {
@@ -27,23 +28,41 @@ class SigninContainer extends Component {
     }
 
     async handleGoogleSignInSuccess({ tokenId }) {
-        const user = 'leonardo - Google'
-        this.props.dispatch(login(user))
-        //alert('Google Success!')
+        const res = await fetch('/api/auth/signin', {
+            headers: { 'Content-Type': 'application/json' },
+            method: 'post',
+            body: JSON.stringify({ provider: 'google', token: tokenId })
+        })
+
+        if (res.ok) {
+            const user = await res.json()
+            this.props.dispatch(login(user))
+        } else {
+            alert('Failed to Login - Google')
+        }
     }
 
     async handleGoogleSignInFailure({ error, details }) {
-        alert('Google Failure!')
+        alert(error + ' - ' + details)
     }
 
     async handleFacebookSignInSuccess(response) {
-        const user = 'leonardo - Facebook'
-        this.props.dispatch(login(user))
-        //alert('Facebook Success!')
+        const res = await fetch('/api/auth/signin', {
+            headers: { 'Content-Type': 'application/json' },
+            method: 'post',
+            body: JSON.stringify({ provider: 'facebook', token: response.accessToken })
+          })
+      
+          if (res.ok) {
+            const user = await res.json()
+            this.props.dispatch(login(user))
+          } else {
+            alert('Failed to Login - Facebook')
+          }
     }
 
     async handleFacebookSignInFailure(response) {
-        alert('Facebook Failure!')
+        alert('Failed to Login - Facebook - ' + response)
     }
 
     render() {
@@ -65,6 +84,6 @@ SigninContainer.propTypes = {
 
 const stateToProps = ({ user }) => ({
     user
-  })
+})
 
 export default withRouter(connect(stateToProps)(SigninContainer))
