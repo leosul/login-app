@@ -47,20 +47,18 @@ class SigninContainer extends Component {
     }
 
     async handleFacebookSignInSuccess(response) {
-        const user = 'Léo'
-        this.props.dispatch(login(user))
-        //const res = await fetch('/api/auth/signin', {
-        //    headers: { 'Content-Type': 'application/json' },
-        //    method: 'post',
-        //    body: JSON.stringify({ provider: 'facebook', token: response.accessToken })
-        //  })
+        const res = await fetch('/api/auth/signin', {
+            headers: { 'Content-Type': 'application/json' },
+            method: 'post',
+            body: JSON.stringify({ provider: 'facebook', token: response.accessToken })
+          })
       
-        //  if (res.ok) {
-        //    const user = await res.json()
-        //    this.props.dispatch(login(user))
-        //  } else {
-        //    alert('Failed to Login - Facebook')
-        //  }
+          if (res.ok) {
+            const user = await res.json()
+            this.props.dispatch(login(user))
+          } else {
+            alert('Failed to Login - Facebook')
+          }
     }
 
     async handleFacebookSignInFailure(response) {
