@@ -32,6 +32,7 @@ class Fetcher {
     }
 
     post(path, payload) {
+        alert('payload: ' + payload)
         const url = `${this.baseUrl}/${path}`
         const req = fetch(url, {
             headers: this.headers,

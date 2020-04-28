@@ -21,7 +21,6 @@ class SigninContainer extends Component {
     }
 
     componentDidUpdate(prevProps) {
-
         if (!!this.props.user && !prevProps.user) {
             this.setState(() => ({ success: true }))
         }
@@ -52,10 +51,8 @@ class SigninContainer extends Component {
             method: 'post',
             body: JSON.stringify({ provider: 'facebook', token: response.accessToken })
           })
-      
-          alert(res.url)
           
-          if (res.ok) {
+          if (res.ok) {            
             const user = await res.json()
             this.props.dispatch(login(user))
           } else {

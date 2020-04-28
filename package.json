@@ -1,27 +1,7 @@
 {
-    "name": "login-app",
-    "version": "1.0.0",
-    "description": "",
-    "main": "index.js",
-    "scripts": {
-        "prestart": "npm run build",
-        "start": "node index.js",
-        "build": "cd client && npm run build",
-        "client": "HTTPS=TRUE cd client && npm run start",
-        "server": "nodemon index.js",
-        "dev": "concurrently --kill-others-on-fail \"npm run server\" \"npm run client\""
-    },
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/leosul/login-app.git"
-    },
-    "keywords": [],
-    "author": "",
-    "license": "ISC",
-    "bugs": {
-        "url": "https://github.com/leosul/login-app/issues"
-    },
-    "homepage": "https://github.com/leosul/login-app#readme",
+    "name": "loginapp",
+    "version": "0.1.0",
+    "private": true,
     "dependencies": {
         "body-parser": "^1.19.0",
         "dotenv": "^8.2.0",
@@ -43,6 +23,14 @@
         "redux-persist": "^6.0.0",
         "redux-persist-transform-encrypt": "^2.0.1",
         "redux-thunk": "^2.3.0"
+    },
+    "scripts": {
+        "prestart": "npm run build",
+        "start": "node index.js",
+        "build": "cd client && npm run build",
+        "client": "cd client && npm run start",
+        "server": "nodemon index.js",
+        "dev": "concurrently --kill-others-on-fail \"npm run server\" \"npm run client\""
     },
     "devDependencies": {
         "concurrently": "^5.2.0",

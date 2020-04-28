@@ -12,7 +12,7 @@ class AuthorizedRoute extends Component {
         if (!user) {
           return <Redirect to='/signin' />
         }
-
+        
         props.user = user
         props.fetcher = new Fetcher(user.token, dispatch)
         return <Component {...props} />

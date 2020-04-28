@@ -24,7 +24,10 @@ function reducer(state = initialState, action) {
             }
 
         case REHYDRATE:
-            return state
+            if (action.payload)
+                return {...state }
+            else
+                return state
 
         default:
             return (state)

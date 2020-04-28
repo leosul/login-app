@@ -12,20 +12,22 @@ import { store, persistor } from './store'
 import AuthorizedRoute from './pages/authorizedRoute/AuthorizedRoute'
 import SigninContainer from './pages/signin/SigninContainer'
 import MainContainer from './pages/main/MainContainer'
+import AppContainer from './pages/app/AppContainer'
 
 const routes = (
     <Provider store={store}>
-      <PersistGate loading={null} persistor={persistor}>
-        <Router>
-            <Switch>
-              <Route path='/signin' component={SigninContainer} exact />
-              <AuthorizedRoute path='/' component={MainContainer} exact />
-              <Redirect from='*' to='/' />
-            </Switch>
-        </Router>
-      </PersistGate>
+        <PersistGate loading={null} persistor={persistor}>
+            <Router>
+                <AppContainer>
+                    <Switch>
+                        <Route path='/signin' component={SigninContainer} exact />
+                        <AuthorizedRoute path='/' component={MainContainer} exact />
+                        <Redirect from='*' to='/' />
+                    </Switch>
+                </AppContainer>
+            </Router>
+        </PersistGate>
     </Provider>
-  )
-  
-  export default routes
-  
+)
+
+export default routes
