@@ -9,12 +9,12 @@ const App = ({ children, user }) => {
       <header className='app-header'>
         <h1 className='app-title'>
           <Link to='/'>
-            login-app
+            LoginApp
           </Link>
         </h1>
         {user &&
           <span className='user'>
-            <Link className='wrapper' to='/'>
+            <Link className='wrapper' to='/signout'>
               <span className='picture' style={{ backgroundImage: `url(${user.picture})` }} />
               <span className='name'>{user.name}</span>
             </Link>

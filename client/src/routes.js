@@ -1,4 +1,4 @@
-import React from 'react'
+    import React from 'react'
 import { Provider } from 'react-redux'
 import { PersistGate } from 'redux-persist/lib/integration/react'
 import {
@@ -13,6 +13,7 @@ import AuthorizedRoute from './pages/authorizedRoute/AuthorizedRoute'
 import SigninContainer from './pages/signin/SigninContainer'
 import MainContainer from './pages/main/MainContainer'
 import AppContainer from './pages/app/AppContainer'
+import SignoutContainer from './pages/signout/SignoutContainer'
 
 const routes = (
     <Provider store={store}>
@@ -22,6 +23,7 @@ const routes = (
                     <Switch>
                         <Route path='/signin' component={SigninContainer} exact />
                         <AuthorizedRoute path='/' component={MainContainer} exact />
+                        <AuthorizedRoute path='/signout' component={SignoutContainer} exact />
                         <Redirect from='*' to='/' />
                     </Switch>
                 </AppContainer>

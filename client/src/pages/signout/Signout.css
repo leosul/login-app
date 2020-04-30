@@ -1,0 +1,153 @@
+#signout header {
+    display: grid;
+    grid-template-columns: 5fr 1fr;
+}
+
+#signout header h2 {
+    display: inline-block;
+    margin-bottom: 12px;
+}
+
+#signout .wrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 10px;
+    margin: 10px 0;
+}
+
+#signout .wrapper .user-info {
+    background: #ffffff;
+    border-radius: 2px;
+    text-align: center;
+    padding: 15px;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+#signout .wrapper .user-info .picture {
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    border-radius: 80px;
+    display: inline-block;
+    height: 80px;
+    width: 80px;
+}
+
+#signout .wrapper .user-info h3 {
+    font-size: 15px;
+    margin: 0;
+    text-align: center;
+}
+
+#signout .wrapper .user-info .provider {
+    font-size: 12px;
+    margin: 0;
+}
+
+#signout .wrapper .user-info .provider span {
+    text-transform: capitalize;
+}
+
+#signout .wrapper .user-info button {
+    font-size: 12px;
+    margin-top: 10px;
+    max-width: 180px;
+}
+
+#signout .wrapper .language-info {
+    background: #ffffff;
+    border-radius: 2px;
+    padding: 15px;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+#signout .wrapper .language-info h3 {
+    font-size: 15px;
+    margin: 0;
+}
+
+#signout .wrapper .language-info ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+#signout .wrapper .language-info ul li {
+    margin-top: 10px;
+}
+
+#signout .wrapper .language-info ul li button {
+    background-color: #f6f6f6;
+    background-repeat: no-repeat;
+    background-position: calc(95%) center;
+    background-size: 25px;
+    color: #303030;
+    font-size: 12px;
+    max-width: 180px;
+    text-align: left;
+}
+
+#signout .wrapper .language-info ul li button.selected {
+    background-image: url('/images/ic_check_purple.png');
+    color: #9c27b0;
+    font-weight: bold;
+}
+
+#signout .wrapper .language-info ul li button:hover,
+#signout .wrapper .language-info ul li button:focus {
+    box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.3);
+}
+
+#signout .wrapper .language-info ul li button:active {
+    background-color: #e6e6e6;
+}
+
+@media screen and (min-width: 375px) {
+    #signout .wrapper .user-info h3 {
+        font-size: 16px;
+    }
+    #signout .wrapper .user-info .provider {
+        font-size: 13px;
+    }
+    #signout .wrapper .user-info button {
+        font-size: 13px;
+    }
+    #signout .wrapper .language-info h3 {
+        font-size: 16px;
+    }
+    #signout .wrapper .language-info ul li button {
+        font-size: 13px;
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    #signout .wrapper {
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 20px;
+    }
+    #signout .wrapper .user-info {
+        display: grid;
+        grid-template-columns: 140px 1fr;
+        text-align: left;
+    }
+    #signout .wrapper .user-info .picture {
+        grid-row: span 2;
+        height: 120px;
+        width: 120px;
+    }
+    #signout .wrapper .user-info h3 {
+        font-size: 18px;
+        margin-top: 12px;
+        text-align: left;
+    }
+    #signout .wrapper .user-info .provider {
+        font-size: 14px;
+    }
+    #signout .wrapper .user-info button {
+        font-size: 14px;
+        margin-top: 0;
+    }
+    #signout .wrapper .language-info ul li button {
+        font-size: 14px;
+    }
+}
