@@ -49,9 +49,13 @@
 }
 
 #signout .wrapper .user-info button {
-    font-size: 12px;
-    margin-top: 10px;
-    max-width: 180px;
+    border: none;
+    background-color: olive;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
 }
 
 #signout .wrapper .language-info {
@@ -59,47 +63,6 @@
     border-radius: 2px;
     padding: 15px;
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.2);
-}
-
-#signout .wrapper .language-info h3 {
-    font-size: 15px;
-    margin: 0;
-}
-
-#signout .wrapper .language-info ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-
-#signout .wrapper .language-info ul li {
-    margin-top: 10px;
-}
-
-#signout .wrapper .language-info ul li button {
-    background-color: #f6f6f6;
-    background-repeat: no-repeat;
-    background-position: calc(95%) center;
-    background-size: 25px;
-    color: #303030;
-    font-size: 12px;
-    max-width: 180px;
-    text-align: left;
-}
-
-#signout .wrapper .language-info ul li button.selected {
-    background-image: url('/images/ic_check_purple.png');
-    color: #9c27b0;
-    font-weight: bold;
-}
-
-#signout .wrapper .language-info ul li button:hover,
-#signout .wrapper .language-info ul li button:focus {
-    box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.3);
-}
-
-#signout .wrapper .language-info ul li button:active {
-    background-color: #e6e6e6;
 }
 
 @media screen and (min-width: 375px) {
@@ -110,12 +73,6 @@
         font-size: 13px;
     }
     #signout .wrapper .user-info button {
-        font-size: 13px;
-    }
-    #signout .wrapper .language-info h3 {
-        font-size: 16px;
-    }
-    #signout .wrapper .language-info ul li button {
         font-size: 13px;
     }
 }
@@ -146,8 +103,5 @@
     #signout .wrapper .user-info button {
         font-size: 14px;
         margin-top: 0;
-    }
-    #signout .wrapper .language-info ul li button {
-        font-size: 14px;
     }
 }

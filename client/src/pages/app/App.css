@@ -10,6 +10,7 @@ main>header {
 }
 
 main>header h1 {
+    background: url('/images/olive.png') 20px center no-repeat;
     background-size: 30px;
     display: inline-block;
     font-size: 18px;
@@ -113,7 +114,7 @@ main>header .user .wrapper .name {
         box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
     }
     main>header .user .wrapper:hover .name {
-        color: #9c27b0;
+        color: olive;
     }
 }
 
