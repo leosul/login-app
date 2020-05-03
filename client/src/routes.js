@@ -11,9 +11,10 @@ import {
 import { store, persistor } from './store'
 import AuthorizedRoute from './pages/authorizedRoute/AuthorizedRoute'
 import SigninContainer from './pages/signin/SigninContainer'
-import MainContainer from './pages/main/MainContainer'
+import MainContainer from './pages/main/MainFormContainer'
 import AppContainer from './pages/app/AppContainer'
 import SignoutContainer from './pages/signout/SignoutContainer'
+import MyChart from './pages/main/MyChart'
 
 const routes = (
     <Provider store={store}>
@@ -22,9 +23,10 @@ const routes = (
                 <AppContainer>
                     <Switch>
                         <Route path='/signin' component={SigninContainer} exact />
+                        {/*<Route path='/' component={MyChart} exact />*/}
                         <AuthorizedRoute path='/' component={MainContainer} exact />
-                        <AuthorizedRoute path='/signout' component={SignoutContainer} exact />
-                        <Redirect from='*' to='/' />
+                        {/*//<AuthorizedRoute path='/signout' component={SignoutContainer} exact />
+                        //<Redirect from='*' to='/' />*/}
                     </Switch>
                 </AppContainer>
             </Router>
