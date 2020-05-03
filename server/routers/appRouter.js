@@ -12,5 +12,6 @@ router.get('/', (_req, res) => {
 router.use('/customers', authenticator, customerRouter)
 router.use('/auth', authRouter)
 router.use('/countries', countryRouter)
+router.use('/countries/:country', countryRouter)
 
 module.exports = router

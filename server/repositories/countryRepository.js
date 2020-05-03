@@ -6,6 +6,13 @@ const findAll = async() => {
     return countries.data
 }
 
+const findByCountry = async(country) => {
+    const countryData = await axios.get(process.env.BASE_API + '/country/' + country)
+
+    return countryData.data
+}
+
 module.exports = {
-    findAll
+    findAll,
+    findByCountry
 }
