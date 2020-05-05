@@ -2,6 +2,7 @@ const { Router } = require('express')
 const authenticator = require('./../middlewares/authenticator')
 const customerRouter = require('./customerRouter')
 const countryRouter = require('./countryRouter')
+const summaryRouter = require('./summaryRouter')
 const authRouter = require('./authRouter')
 const router = new Router()
 
@@ -13,5 +14,6 @@ router.use('/customers', authenticator, customerRouter)
 router.use('/auth', authRouter)
 router.use('/countries', countryRouter)
 router.use('/countries/:country', countryRouter)
+router.use('/summary', summaryRouter)
 
 module.exports = router
