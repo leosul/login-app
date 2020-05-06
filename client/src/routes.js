@@ -22,10 +22,9 @@ const routes = (
                 <AppContainer>
                     <Switch>
                         <Route path='/signin' component={SigninContainer} exact />
-                        {/*<Route path='/' component={MyChart} exact />*/}
                         <AuthorizedRoute path='/' component={MainContainer} exact />
-                        {/*//<AuthorizedRoute path='/signout' component={SignoutContainer} exact />
-                        //<Redirect from='*' to='/' />*/}
+                        <AuthorizedRoute path='/signout' component={SignoutContainer} exact />
+                        <Redirect from='*' to='/' />
                     </Switch>
                 </AppContainer>
             </Router>

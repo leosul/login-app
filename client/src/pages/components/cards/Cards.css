@@ -1,6 +1,7 @@
 .main-card {
     display: block;
     width: 300px;
+    padding: 10px;
 }
 
 .card-country {

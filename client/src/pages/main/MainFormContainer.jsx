@@ -49,7 +49,12 @@ class MainFormContainer extends Component {
         const content = await res.json()
 
         this.setState({
-            countries: content
+            countries: content.sort(function( a, b ) {
+                a = a.Country.toLowerCase();
+                b = b.Country.toLowerCase();
+            
+                return a < b ? -1 : a > b ? 1 : 0;
+            })
         })
     }
 

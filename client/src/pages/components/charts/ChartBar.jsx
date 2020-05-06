@@ -2,27 +2,25 @@ import React from 'react';
 import { Doughnut } from 'react-chartjs-2';
 
 const ChartBar = ({ countryData }) => {
-    
-    alert(countryData.TotalConfirmed + ' - ' + countryData.TotalDeaths + ' - ' + countryData.TotalRecovered)
-
     const data = {
         labels: [
-            'TotalDeaths',
-            'TotalRecovered'
+            'Confirmed',
+            'Deaths',
+            'Recovered'
         ],
         datasets: [
             {
-                data: [countryData.TotalDeaths, countryData.TotalRecovered],
+                data: [countryData.TotalConfirmed, countryData.TotalDeaths, countryData.TotalRecovered],
                 backgroundColor: [
                     '#FF6384',
                     '#36A2EB',
                     '#FFCE56'
-                    ],
-                    hoverBackgroundColor: [
+                ],
+                hoverBackgroundColor: [
                     '#FF6384',
                     '#36A2EB',
                     '#FFCE56'
-                    ]
+                ]
             }
         ]
     };
