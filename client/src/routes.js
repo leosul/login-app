@@ -14,7 +14,6 @@ import SigninContainer from './pages/signin/SigninContainer'
 import MainContainer from './pages/main/MainFormContainer'
 import AppContainer from './pages/app/AppContainer'
 import SignoutContainer from './pages/signout/SignoutContainer'
-import MyChart from './pages/main/MyChart'
 
 const routes = (
     <Provider store={store}>
