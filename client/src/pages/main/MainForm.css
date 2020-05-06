@@ -1,10 +1,10 @@
 .main {
+    display: flex;
     background-color: tomato;
 }
 
 .country {
-    display: inline-block;
-    position: relative;
+    display: block;
     margin: 5px;
     padding: 0px;
 }
@@ -42,10 +42,10 @@ select {
 }
 
 .chart {
-    background-color: turquoise;
-    display: flex;
-    margin-left: 22%;
-    margin-top: 5px;
-    position: absolute;
-    border-radius: 2px;
+    background-color: yellowgreen;
+    display: block;
+    padding: 5%;
+    padding-left: 8%;
+    width: 70%;
+    margin-left: 1%;
 }
