@@ -9,22 +9,24 @@
 
 # Used dependencies:
 
-### reactjs
-### nodejs
-### redux
-### mongoDb
-### express
-### dotenv
-### jsonwebtoken
-### concurrently
-### nodemon
-### react-chartjs-2
-### mongoose
-### google-auth-library
-### fb
-### moment
-### axios
-### @material-ui/core
+  ```
+reactjs
+nodejs
+redux
+mongoDb
+express
+dotenv
+jsonwebtoken
+concurrently
+nodemon
+react-chartjs-2
+mongoose
+google-auth-library
+fb
+moment
+axios
+@material-ui/core
+  ```
 
 ## How to run
 1. Clone or download the project
