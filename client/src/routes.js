@@ -11,9 +11,9 @@ import {
 import { store, persistor } from './store'
 import AuthorizedRoute from './pages/authorizedRoute/AuthorizedRoute'
 import SigninContainer from './pages/signin/SigninContainer'
-import MainContainer from './pages/main/MainFormContainer'
 import AppContainer from './pages/app/AppContainer'
 import SignoutContainer from './pages/signout/SignoutContainer'
+import MainFormContainer from './pages/main/MainFormContainer'
 
 const routes = (
     <Provider store={store}>
@@ -22,7 +22,7 @@ const routes = (
                 <AppContainer>
                     <Switch>
                         <Route path='/signin' component={SigninContainer} exact />
-                        <AuthorizedRoute path='/' component={MainContainer} exact />
+                        <AuthorizedRoute path='/' component={MainFormContainer} exact />
                         <AuthorizedRoute path='/signout' component={SignoutContainer} exact />
                         <Redirect from='*' to='/' />
                     </Switch>
