@@ -1,0 +1,12 @@
+.main-card {
+    display: block;
+    width: 300px;
+}
+
+.card-country {
+    padding: 5px;
+}
+
+.card-summary {
+    padding: 5px;
+}
