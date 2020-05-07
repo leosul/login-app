@@ -40,12 +40,15 @@ axios
   GOOGLE_CLIENT_ID=[googleClientId]
   FACEBOOK_APP_ID=[fbAppId]
   FACEBOOK_APP_SECRET=[fbAppSecret]
+  BASE_API=https://api.covid19api.com
+  GENERATE_SOURCEMAP=false
   ```
 4. Create a `.env` file inside the `client` folder like:
   ```
   REACT_APP_PERSIST_ENCRYPT_KEY=[persistEncryptKey]
   REACT_APP_GOOGLE_ID=[googleClientId]
   REACT_APP_FACEBOOK_ID=[fbAppId]
+  GENERATE_SOURCEMAP=false
   ```
 5. `npm run dev` or `npm start`
 
