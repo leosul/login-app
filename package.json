@@ -31,7 +31,7 @@
     },
     "scripts": {
         "prestart": "npm run build",
-        "start": "node index.js",
+        "start": "node --max-old-space-size=4096 index.js",
         "build": "cd client && npm run build",
         "client": "cd client && npm run start",
         "server": "nodemon index.js",
