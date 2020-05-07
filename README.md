@@ -2,10 +2,11 @@
 ### Login using Facebook or Google account with Reactjs + Nodejs +  MongoDb
 
 ## Description
-### The objective of this project is to show the use of some technologies together with the authentication made with google or facebook.
+The objective of this project is to show the use of some technologies together with the authentication made with google or facebook.
 
-### My initial idea was to learn how to use google and facebook authentication, but the project was interesting to me, so I thought it was cool to also create access control in Nodejs, after being logged in it would be really cool to show something really important at this point, so I created the access to an API with real-time information from COVID-19, to show the data I also learned how to create a 2 card chart with real data. Hope you like it!!! 
-### Well, in this project I was able to show very important things like mongoDb, authentication with Facebook, Google, create graphics and search data in real time from an external API.
+My initial idea was to learn how to use google and facebook authentication, but the project was interesting to me, so I thought it was cool to also create access control in Nodejs, after being logged in it would be really cool to show something really important at this point, so I created the access to an API with real-time information from COVID-19, to show the data I also learned how to create a 2 card chart with real data. Hope you like it!!!
+
+Well, in this project I was able to show very important things like mongoDb, authentication with Facebook, Google, create graphics and search data in real time from an external API.
 
 ## Used dependencies:
 
