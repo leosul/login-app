@@ -28,15 +28,15 @@ class MainFormContainer extends Component {
     async loadGlobalData() {
         const res = await this.fetcher.get(`summary`)
         const content = await res.json()
-        const contentSummary = content['Global']
+        const contentSummary = content.Global
 
         const convertedDataSummary = {
-            NewConfirmed: this.formatNumber(contentSummary.NewConfirmed),
-            TotalConfirmed: this.formatNumber(contentSummary.TotalConfirmed),
-            NewDeaths: this.formatNumber(contentSummary.NewDeaths),
-            TotalDeaths: this.formatNumber(contentSummary.TotalDeaths),
-            NewRecovered: this.formatNumber(contentSummary.NewRecovered),
-            TotalRecovered: this.formatNumber(contentSummary.TotalRecovered)
+            newConfirmed: this.formatNumber(contentSummary.NewConfirmed),
+            totalConfirmed: this.formatNumber(contentSummary.TotalConfirmed),
+            newDeaths: this.formatNumber(contentSummary.NewDeaths),
+            totalDeaths: this.formatNumber(contentSummary.TotalDeaths),
+            newRecovered: this.formatNumber(contentSummary.NewRecovered),
+            totalRecovered: this.formatNumber(contentSummary.TotalRecovered)
         }
 
         this.setState({
@@ -75,22 +75,22 @@ class MainFormContainer extends Component {
         const res = await this.fetcher.get(`summary`)
         const content = await res.json()
 
-        const contentCountry = content['Countries'].filter(
+        const contentCountry = content.Countries.find(
             s => s.Country === this.state.countryName
-        )[0]
+        )
 
         if (contentCountry) {
             const convertedCountryData = {
-                Country: contentCountry.Country,
-                CountryCode: contentCountry.CountryCode,
-                Slug: contentCountry.Slug,
-                NewConfirmed: this.formatNumber(contentCountry.NewConfirmed),
-                TotalConfirmed: this.formatNumber(contentCountry.TotalConfirmed),
-                NewDeaths: this.formatNumber(contentCountry.NewDeaths),
-                TotalDeaths: this.formatNumber(contentCountry.TotalDeaths),
-                NewRecovered: this.formatNumber(contentCountry.NewRecovered),
-                TotalRecovered: this.formatNumber(contentCountry.TotalRecovered),
-                Date: moment(contentCountry.Date).format('DD/MM/YYYY')
+                country: contentCountry.Country,
+                countryCode: contentCountry.CountryCode,
+                slug: contentCountry.Slug,
+                newConfirmed: this.formatNumber(contentCountry.NewConfirmed),
+                totalConfirmed: this.formatNumber(contentCountry.TotalConfirmed),
+                newDeaths: this.formatNumber(contentCountry.NewDeaths),
+                totalDeaths: this.formatNumber(contentCountry.TotalDeaths),
+                newRecovered: this.formatNumber(contentCountry.NewRecovered),
+                totalRecovered: this.formatNumber(contentCountry.TotalRecovered),
+                date: moment(contentCountry.Date).format('DD/MM/YYYY')
             }
 
             this.setState({

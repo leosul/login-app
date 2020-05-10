@@ -8,7 +8,16 @@ const MainForm = ({ countries, countryName, onChangeField, onClickField, country
     <div className='main'>
         <div>
             <div className='card'>
-                <Cards countryData={countryData} summary={summary} />
+                <Cards 
+                    country={countryData.country}
+                    totalConfirmed={countryData.totalConfirmed}
+                    totalDeaths={countryData.totalDeaths}
+                    totalRecovered={countryData.totalRecovered}
+                    date={countryData.date}
+                    summaryTotalConfirmed={summary.totalConfirmed}
+                    summaryTotalDeaths={summary.totalDeaths}
+                    summaryTotalRecovered={summary.totalRecovered}
+                />
             </div>
             <div className='country'>
                 <select name="countryName" onChange={onChangeField} value={countryName}>
@@ -21,7 +30,11 @@ const MainForm = ({ countries, countryName, onChangeField, onClickField, country
             </div>
         </div>
         <div className='chart'>
-            <ChartBar countryData={countryData}/>
+            <ChartBar 
+                totalConfirmed={countryData.totalConfirmed}
+                totalDeaths={countryData.totalDeaths}
+                totalRecovered={countryData.totalRecovered}
+                date={countryData.date}/>
         </div>
     </div>
 )

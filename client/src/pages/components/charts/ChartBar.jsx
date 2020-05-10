@@ -1,7 +1,10 @@
 import React from 'react';
 import { Doughnut } from 'react-chartjs-2';
 
-const ChartBar = ({ countryData }) => {
+const ChartBar = ({
+    totalConfirmed,
+    totalDeaths,
+    totalRecovered }) => {
     const data = {
         labels: [
             'Confirmed',
@@ -10,7 +13,7 @@ const ChartBar = ({ countryData }) => {
         ],
         datasets: [
             {
-                data: [countryData.TotalConfirmed, countryData.TotalDeaths, countryData.TotalRecovered],
+                data: [totalConfirmed, totalDeaths, totalRecovered],
                 backgroundColor: [
                     '#FF6384',
                     '#36A2EB',
