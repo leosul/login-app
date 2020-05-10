@@ -1,7 +1,9 @@
-const summaryRepository = require('./../repositories/summaryRepository')
+const axios = require('axios')
 
-const getSummary = () => {
-    return summaryRepository.getSummary()
+const getSummary = async() => {
+    const summary = await axios.get(process.env.BASE_API + '/summary')
+
+    return summary.data
 }
 
 module.exports = {

@@ -1,11 +1,16 @@
-const countryRepository = require('../repositories/countryRepository')
+const axios = require('axios')
 
-const findAll = () => {
-    return countryRepository.findAll()
+const findAll = async() => {
+    const countries = await axios.get(process.env.BASE_API + '/countries')
+
+    return countries.data
+
 }
 
-const findByCountry = (country) => {
-    return countryRepository.findByCountry(country)
+const findByCountry = async(country) => {
+    const countryData = await axios.get(process.env.BASE_API + '/country/' + country)
+
+    return countryData.data
 }
 
 module.exports = {
